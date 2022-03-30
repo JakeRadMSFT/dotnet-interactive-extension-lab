@@ -1,6 +1,7 @@
 ﻿using Microsoft.DotNet.Interactive;
 using Microsoft.ML.AutoML;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MLNetAutoML.InteractiveExtension
 {
@@ -47,6 +48,7 @@ namespace MLNetAutoML.InteractiveExtension
 		{
 			if (this.ValueToUpdate != null)
 			{
+				Task.Delay(1000).Wait();
 				this.ValueToUpdate.Update(this);
 			}
 		}
